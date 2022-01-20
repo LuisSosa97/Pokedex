@@ -1,8 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { useEffect, useState } from 'react';
 import React from 'react';
-import ReactDOM from 'react-dom';
+
 import Modal from 'react-modal';
 
 const customStyles = {
@@ -64,7 +64,7 @@ function App() {
  
  
   const nextID=(idMin=1, idMax=600) =>{
-    if((pokemon.id == NaN && pokemon.id == NaN) || (pokemon.id == undefined && pokemon.id == undefined)){
+    if((pokemon.id === isNaN && pokemon.id === isNaN) || (pokemon.id === undefined && pokemon.id === undefined)){
       currentID();
       openBoton();
     }
@@ -78,7 +78,7 @@ function App() {
           }
   }
   const backID=(idMin=1, idMax=600) =>{
-    if((pokemon.id == NaN && idMax == pokemon.id) || (pokemon.id == undefined && pokemon.id == undefined)){
+    if((pokemon.id === isNaN && pokemon.id === isNaN) || (pokemon.id === undefined && pokemon.id === undefined)){
       currentID();
     }
       if(pokemon.id <= idMin){
