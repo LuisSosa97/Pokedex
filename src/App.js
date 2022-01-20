@@ -111,8 +111,8 @@ function App() {
           {pokemon.name ??"No pokemon Selected"}
         </p>
         <p>
-          {"Id pokemon: " + pokemon.id ??"No pokemon Selected"}
-          {pokemonId}
+          {"Id pokemon: " + pokemonId ??"No pokemon Selected"}
+          
         </p>
         <div>
       
