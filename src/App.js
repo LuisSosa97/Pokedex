@@ -33,7 +33,6 @@ function App() {
   }
 
   function afterOpenModal() {
-    // references are now sync'd and can be accessed.
     subtitle.style.color = '#f00';
   }
 
@@ -80,6 +79,7 @@ function App() {
   const backID=(idMin=1, idMax=600) =>{
     if((pokemon.id === isNaN && pokemon.id === isNaN) || (pokemon.id === undefined && pokemon.id === undefined)){
       currentID();
+      
     }
       if(pokemon.id <= idMin){
         return pokemon.id = idMax;
@@ -92,7 +92,7 @@ function App() {
     console.log({pokemon})
     pokemon?.abilities?.map((ability) => 
     console.log({name: ability.name}));
-    setPokemonId(pokemon.id)
+    setPokemonId(pokemon.id,pokemonId)
     
   },[pokemon]);
 
