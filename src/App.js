@@ -46,6 +46,7 @@ function App() {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then((Response)=> Response.json())
     .then((data) => setPokemon(data));
+    openBoton();
   };
   const getRandomInt = (min = 1, max = 500)=>{
    
