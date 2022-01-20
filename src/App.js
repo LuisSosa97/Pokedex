@@ -92,7 +92,7 @@ function App() {
     console.log({pokemon})
     pokemon?.abilities?.map((ability) => 
     console.log({name: ability.name}));
-    setPokemonId(pokemon.id,pokemonId)
+    setPokemonId(pokemon.id)
     
   },[pokemon]);
 
@@ -112,6 +112,7 @@ function App() {
         </p>
         <p>
           {"Id pokemon: " + pokemon.id ??"No pokemon Selected"}
+          {pokemonId}
         </p>
         <div>
       
