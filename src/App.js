@@ -79,6 +79,7 @@ function App() {
   const backID=(idMin=1, idMax=600) =>{
     if((pokemon.id === isNaN && pokemon.id === isNaN) || (pokemon.id === undefined && pokemon.id === undefined)){
       currentID();
+      openBoton();
       
     }
       if(pokemon.id <= idMin){
