@@ -99,6 +99,9 @@ function App() {
 
   return (
     <div className="App">
+      <div>
+      <a href="https://github.com/LuisSosa97/Pokedex.git">github</a>
+      </div>
       
 
       <header className="App-header">
