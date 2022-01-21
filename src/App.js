@@ -66,7 +66,7 @@ function App() {
   const nextID=(idMin=1, idMax=600) =>{
     if((pokemon.id === isNaN && pokemon.id === isNaN) || (pokemon.id === undefined && pokemon.id === undefined)){
       currentID();
-      openBoton();
+      
     }
     if(pokemon.id >= idMax){
         return pokemon.id = idMin;
@@ -135,7 +135,7 @@ function App() {
             ))
           }
           </ul>
-        <button onClick={closeModal}>close</button>
+        <button className='button' onClick={closeModal}>close</button>
        
         
       </Modal>
