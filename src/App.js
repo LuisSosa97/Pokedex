@@ -24,6 +24,7 @@ function App() {
   const [botonActivo, setBotonActivo] = useState(true)
   const [pokemon, setPokemon] = useState({});
   const [pokemonId, setPokemonId] = useState(1);
+  const [busqueda, setBusqueda]= useState("");
 
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -39,6 +40,27 @@ function App() {
   function closeModal() {
     setIsOpen(false);
   }
+
+
+  const onChange = async e=>{
+
+    e.persist();
+
+    setBusqueda(e.target.value);
+
+  }
+
+  const fetchPokemonbyname = () => {
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/${busqueda}`)
+
+      .then((response) => response.json())
+
+      .then((data) => setPokemon(data))
+
+      ;
+
+  };
   
   
 
@@ -120,6 +142,16 @@ function App() {
           
         </p>
         <div>
+        <div className="containerInput">
+        <label>Busqueda de pokemon ID o Nombre</label>
+        <br></br>	
+        <div class="input-container">
+        <input value={busqueda} placeholder="Ingres Nombre de pokemon"onChange={onChange}/>
+        </div>
+
+        
+
+        </div>
       
       <Modal
         isOpen={modalIsOpen}
@@ -147,6 +179,7 @@ function App() {
         <button className='button' onClick={()=> fetchPokemon(backID())}>back</button>
         <button className='button' onClick={() => fetchPokemon(getRandomInt())}>Random</button>
         <button className='button' onClick={()=> fetchPokemon(nextID())}>Next</button>
+        <button className="button"  onClick={() => fetchPokemonbyname()}>Buscar</button>
         </div>
         
       </header>
